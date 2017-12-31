@@ -21,7 +21,7 @@ unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-const uint256 hashGenesisBlock("0x515B0C1D60374135B72D70F43A9B7BD6AE6388E10C2DF89A06227ACF377ED7FB);
+const uint256 hashGenesisBlock("0x0000000000374135B72D70F43A9B7BD6AE6388E10C2DF89A06227ACF377ED7FB);
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 hashBestChain = 0;
