@@ -1459,7 +1459,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig     = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((unsigned char*)pszTimestamp, (unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue       = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << CBigNum("0x5F1DF16B2B704C8A578D0BBAF74D385CDE12C11EE50455F3C438EF4C3FBCF649B6DE611FEAE06279A60939E028A8D65C10B73071A6F16719274855FEB0FD8A6704") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << CBigNum("0x") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
@@ -1475,7 +1475,7 @@ bool LoadBlockIndex(bool fAllowNew)
             printf("%s\n", hashGenesisBlock.ToString().c_str());
             txNew.vout[0].scriptPubKey.print();
             block.print();
-            assert(block.hashMerkleRoot == uint256("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+            assert(block.hashMerkleRoot == uint256("0x"));
 
         assert(block.GetHash() == hashGenesisBlock);
 
