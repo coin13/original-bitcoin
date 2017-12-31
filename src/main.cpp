@@ -1458,7 +1458,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig     = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((unsigned char*)pszTimestamp, (unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue       = 50 * COIN;
+        txNew.vout[0].nValue       = 88 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << CBigNum("0x") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
