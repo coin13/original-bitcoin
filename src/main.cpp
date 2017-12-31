@@ -21,7 +21,7 @@ unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-const uint256 hashGenesisBlock("0x0000000000374135B72D70F43A9B7BD6AE6388E10C2DF89A06227ACF377ED7FB);
+const uint256 hashGenesisBlock("0x0000000000374135B72D70F43A9B7BD6AE6388E10C2DF89A06227ACF377ED7FB");
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 hashBestChain = 0;
@@ -1459,7 +1459,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig     = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((unsigned char*)pszTimestamp, (unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue       = 88 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << CBigNum("0x") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << CBigNum("0x6E3CD48665DC2A56F7FB454A9A7452427C689DA11A3732CCA404C341B09DB328B10E2F67BD002436FCF259305566BC19905FE88A2C57DB5008ECA269952D3CEA") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
@@ -1475,7 +1475,7 @@ bool LoadBlockIndex(bool fAllowNew)
             printf("%s\n", hashGenesisBlock.ToString().c_str());
             txNew.vout[0].scriptPubKey.print();
             block.print();
-            assert(block.hashMerkleRoot == uint256("0x"));
+            assert(block.hashMerkleRoot == uint256("0xC9EBBA922B180DF05327B3CAD4C318030486D3A242D4310BB10B831DE39AD86C"));
 
         assert(block.GetHash() == hashGenesisBlock);
 
