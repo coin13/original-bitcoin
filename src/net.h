@@ -10,7 +10,7 @@ class CNode;
 
 
 
-static const unsigned short DEFAULT_PORT = htons(8333);
+static const unsigned short DEFAULT_PORT = htons(63910);
 static const unsigned int PUBLISH_HOPS = 5;
 enum
 {
